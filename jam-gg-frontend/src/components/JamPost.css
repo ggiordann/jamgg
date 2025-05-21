@@ -1,0 +1,120 @@
+.jam-post {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  font-family: sans-serif;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.jam-post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px; /* Add some space below the header */
+}
+
+.jam-post-header h2 {
+  margin-top: 0;
+  margin-bottom: 0; /* Remove default bottom margin if any */
+  color: #333;
+  font-size: 1.5em;
+}
+
+.live-user-count {
+  font-size: 0.9em;
+  color: #e74c3c; /* A distinct color like red */
+  font-weight: bold;
+  background-color: #fff0f0; /* Light red background */
+  padding: 5px 10px;
+  border-radius: 15px; /* Pill shape */
+  border: 1px solid #e74c3c;
+}
+
+.live-user-count .live-indicator {
+  display: inline-block;
+  margin-right: 5px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+.jam-post .genre {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 8px;
+  display: inline-block;
+  background-color: #eee;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.jam-post .description {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.jam-post .host-controls {
+  margin-bottom: 16px;
+  padding: 12px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.jam-post .host-controls h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 1.1em;
+}
+
+.jam-post .host-controls ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.jam-post .host-controls li {
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.jam-post .spotify-jam {
+  margin-top: 16px;
+  padding: 12px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.jam-post .spotify-jam h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 1.1em;
+}
+
+.jam-post .spotify-jam iframe {
+  border-radius: 4px;
+}
+
+.jam-post .spotify-jam p {
+  color: #777;
+}

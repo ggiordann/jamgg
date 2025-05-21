@@ -1,0 +1,112 @@
+.jam-create-form {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 24px;
+  margin: 16px;
+  font-family: sans-serif;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
+
+.jam-create-form h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.8em;
+  text-align: center;
+}
+
+.jam-create-form .form-group {
+  margin-bottom: 16px;
+}
+
+.jam-create-form label {
+  display: block;
+  margin-bottom: 6px;
+  color: #555;
+  font-weight: bold;
+}
+
+.jam-create-form input[type="text"],
+.jam-create-form input[type="url"],
+.jam-create-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensures padding doesn't add to width */
+  font-size: 1em;
+}
+
+.jam-create-form textarea {
+  resize: vertical; /* Allow vertical resizing */
+}
+
+.jam-create-form .host-controls-group {
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.jam-create-form .host-controls-group legend {
+  padding: 0 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+.jam-create-form .host-controls-group div {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.jam-create-form .host-controls-group input[type="checkbox"] {
+  margin-right: 8px;
+  height: 18px; /* Custom checkbox size */
+  width: 18px; /* Custom checkbox size */
+}
+
+.jam-create-form .host-controls-group label {
+  margin-bottom: 0; /* Align with checkbox */
+  font-weight: normal;
+}
+
+.jam-create-form .ai-features {
+  border: 1px dashed #ddd;
+  padding: 16px;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  margin-top: 20px;
+}
+
+.jam-create-form .ai-features h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #333;
+  font-size: 1.2em;
+}
+
+.jam-create-form .ai-features input[type="text"] {
+  background-color: #eee;
+  cursor: not-allowed;
+}
+
+
+.jam-create-form .submit-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.jam-create-form .submit-button:hover {
+  background-color: #0056b3;
+}

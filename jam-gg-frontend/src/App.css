@@ -1,0 +1,72 @@
+/* General App Styling */
+.App {
+  /* text-align: center; */ /* Removed as it's not always desired for all child elements */
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  text-align: center;
+  font-size: calc(12px + 2vmin); /* Slightly increased base font size */
+  color: white;
+  margin-bottom: 20px; /* Added margin to separate header from main content */
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 1.8em; /* Adjusted h1 size within header */
+}
+
+main {
+  padding: 0 20px 20px 20px; /* Added padding to the sides and bottom */
+  max-width: 1200px; /* Limit overall width of main content */
+  margin: 0 auto; /* Center main content */
+}
+
+/* Flexbox layout for main content area */
+.main-content-flex {
+  display: flex;
+  flex-direction: row; /* Arrange children (jam-section, chat-section) side-by-side */
+  gap: 20px; /* Space between the jam section and the chat section */
+  align-items: flex-start; /* Align items to the top */
+}
+
+.jam-section {
+  flex: 3; /* Jam section takes up more space (e.g., 3 parts of the available width) */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between JamPost and JamCreateForm within this section */
+}
+
+.chat-section {
+  flex: 2; /* Chat section takes up less space (e.g., 2 parts of the available width) */
+  /* max-height: 80vh; */ /* Let ChatRoom component control its own height */
+  display: flex; /* Helps if ChatRoom needs to fill this container */
+  flex-direction: column; /* Ensure ChatRoom can expand vertically if needed */
+}
+
+/* Ensure ChatRoom component can utilize the space within chat-section */
+.chat-section > .chat-room {
+  width: 100%; /* ChatRoom takes full width of its parent (.chat-section) */
+  /* height: 100%; */ /* Let ChatRoom define its own height or min-height */
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #ddd;
+  margin: 20px 0;
+}
+
+/* Responsive layout: Stack jam and chat sections on smaller screens */
+@media (max-width: 768px) {
+  .main-content-flex {
+    flex-direction: column; /* Stack them vertically */
+    align-items: stretch; /* Stretch items to fill the width of the container */
+  }
+
+  .chat-section {
+    margin-top: 20px; /* Add some space above the chat section when stacked */
+    max-height: 60vh; /* Adjust max-height for smaller screens, if needed */
+  }
+}

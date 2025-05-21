@@ -1,0 +1,110 @@
+.chat-room {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  font-family: sans-serif;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 400px; /* Or a specific height, or use flex-grow if in a flex container */
+  max-width: 600px; /* Or your preferred max width */
+}
+
+.chat-room h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #333;
+  font-size: 1.4em;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+.messages-display {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.message {
+  margin-bottom: 8px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  line-height: 1.4;
+}
+
+.other-user-message {
+  background-color: #e9e9eb;
+  text-align: left;
+  margin-right: 20%; /* Push other users' messages to the left */
+}
+
+.current-user-message {
+  background-color: #007bff;
+  color: white;
+  text-align: right;
+  margin-left: 20%; /* Push current user's messages to the right */
+}
+
+.message-user {
+  font-weight: bold;
+  margin-right: 6px;
+  font-size: 0.9em;
+}
+
+.other-user-message .message-user {
+  color: #333;
+}
+
+.current-user-message .message-user {
+  color: #e0e0e0; /* Lighter color for user on own message */
+}
+
+.message-text {
+  font-size: 1em;
+}
+
+.message-timestamp {
+  display: block; /* Or inline-block if preferred */
+  font-size: 0.75em;
+  color: #888;
+  margin-top: 4px;
+}
+
+.current-user-message .message-timestamp {
+  color: #e0e0e0;
+}
+
+.message-input-area {
+  display: flex;
+  margin-top: auto; /* Pushes input to the bottom */
+}
+
+.message-input-area input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+  font-size: 1em;
+}
+
+.message-input-area button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.message-input-area button:hover {
+  background-color: #0056b3;
+}

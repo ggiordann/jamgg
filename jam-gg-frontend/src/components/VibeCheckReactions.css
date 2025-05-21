@@ -1,0 +1,85 @@
+.vibe-check-reactions {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 20px; /* Space above this component */
+  background-color: #f7f7f7;
+  font-family: sans-serif;
+}
+
+.vibe-check-reactions h4 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #333;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.reaction-buttons {
+  display: flex;
+  justify-content: space-around; /* Distribute buttons evenly */
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.reaction-button {
+  background-color: #fff;
+  border: 2px solid #007bff;
+  color: #007bff;
+  padding: 8px 12px;
+  border-radius: 20px; /* Pill-shaped buttons */
+  font-size: 1.5em; /* Larger emoji */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-flex; /* Align emoji nicely */
+  align-items: center;
+  justify-content: center;
+}
+
+.reaction-button:hover,
+.reaction-button:focus {
+  background-color: #007bff;
+  color: #fff;
+  transform: scale(1.1); /* Slight zoom effect */
+  outline: none;
+}
+
+.reaction-button:active {
+  transform: scale(1.0); /* Click effect */
+}
+
+.current-vibe-display {
+  margin-top: 16px;
+  padding: 12px;
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+.current-vibe-display h5 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #555;
+  font-size: 1em;
+}
+
+.current-vibe-display ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
+  gap: 10px; /* Space between reaction counts */
+}
+
+.current-vibe-display li {
+  color: #444;
+  font-size: 0.95em;
+  background-color: #f0f0f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.current-vibe-display .emoji {
+  margin-right: 4px;
+}

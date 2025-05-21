@@ -1,0 +1,110 @@
+.jam-discover-feed-page {
+  font-family: sans-serif;
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.discover-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.discover-header h1 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.ai-personalization-note {
+  font-size: 0.9em;
+  color: #666;
+  background-color: #e9f5ff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px dashed #007bff;
+  display: inline-block; /* So it doesn't take full width */
+}
+
+.jam-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 20px;
+}
+
+.jam-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column; /* Stack header, body, footer */
+  transition: box-shadow 0.3s ease;
+}
+
+.jam-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.jam-card-header {
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.jam-title {
+  margin: 0 0 5px 0;
+  font-size: 1.4em;
+  color: #007bff; /* Highlight title */
+}
+
+.jam-genre {
+  font-size: 0.9em;
+  color: #555;
+  background-color: #f0f0f0;
+  padding: 3px 8px;
+  border-radius: 12px; /* Pill shape */
+  display: inline-block;
+}
+
+.jam-card-body {
+  padding: 15px 20px;
+  flex-grow: 1; /* Allows body to expand if cards have different heights */
+}
+
+.host-info {
+  font-size: 0.95em;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.host-name {
+  font-weight: bold;
+  color: #333;
+}
+
+.listener-count {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.jam-card-footer {
+  padding: 15px 20px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #eee;
+  text-align: right; /* Align button to the right */
+}
+
+.join-jam-button {
+  background-color: #28a745; /* Green for join */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 0.95em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.join-jam-button:hover {
+  background-color: #218838; /* Darker green */
+}
