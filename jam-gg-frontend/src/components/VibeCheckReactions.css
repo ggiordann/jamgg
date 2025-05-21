@@ -1,16 +1,16 @@
 .vibe-check-reactions {
-  border: 1px solid #ddd;
+  border: 1px solid var(--highlight-background);
   border-radius: 8px;
   padding: 16px;
   margin-top: 20px; /* Space above this component */
-  background-color: #f7f7f7;
-  font-family: sans-serif;
+  background-color: var(--element-background);
+  /* font-family: sans-serif; */ /* Inherits global font */
 }
 
 .vibe-check-reactions h4 {
   margin-top: 0;
   margin-bottom: 12px;
-  color: #333;
+  color: var(--text-primary);
   font-size: 1.2em;
   text-align: center;
 }
@@ -23,14 +23,14 @@
 }
 
 .reaction-button {
-  background-color: #fff;
-  border: 2px solid #007bff;
-  color: #007bff;
+  background-color: var(--element-background); /* Button background */
+  border: 2px solid var(--accent-primary);
+  color: var(--accent-primary); /* Emoji/text color */
   padding: 8px 12px;
   border-radius: 20px; /* Pill-shaped buttons */
   font-size: 1.5em; /* Larger emoji */
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
   display: inline-flex; /* Align emoji nicely */
   align-items: center;
   justify-content: center;
@@ -38,8 +38,8 @@
 
 .reaction-button:hover,
 .reaction-button:focus {
-  background-color: #007bff;
-  color: #fff;
+  background-color: var(--accent-primary);
+  color: var(--text-primary); /* Text color on hover, assuming accent is dark enough */
   transform: scale(1.1); /* Slight zoom effect */
   outline: none;
 }
@@ -51,15 +51,15 @@
 .current-vibe-display {
   margin-top: 16px;
   padding: 12px;
-  background-color: #fff;
-  border: 1px solid #eee;
+  background-color: var(--background-primary); /* Inner section background */
+  border: 1px solid var(--highlight-background);
   border-radius: 4px;
 }
 
 .current-vibe-display h5 {
   margin-top: 0;
   margin-bottom: 8px;
-  color: #555;
+  color: var(--text-secondary);
   font-size: 1em;
 }
 
@@ -73,9 +73,9 @@
 }
 
 .current-vibe-display li {
-  color: #444;
+  color: var(--text-primary);
   font-size: 0.95em;
-  background-color: #f0f0f0;
+  background-color: var(--highlight-background); /* Background for each vibe count */
   padding: 4px 8px;
   border-radius: 4px;
 }

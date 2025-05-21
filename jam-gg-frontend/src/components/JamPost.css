@@ -1,11 +1,11 @@
 .jam-post {
-  border: 1px solid #ccc;
+  border: 1px solid var(--highlight-background);
   border-radius: 8px;
   padding: 16px;
   margin: 16px;
-  font-family: sans-serif;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* font-family: sans-serif; */ /* Inherits global font */
+  background-color: var(--element-background);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Adjusted shadow */
 }
 
 .jam-post-header {
@@ -18,24 +18,25 @@
 .jam-post-header h2 {
   margin-top: 0;
   margin-bottom: 0; /* Remove default bottom margin if any */
-  color: #333;
+  color: var(--text-primary);
   font-size: 1.5em;
 }
 
 .live-user-count {
   font-size: 0.9em;
-  color: #e74c3c; /* A distinct color like red */
+  color: var(--accent-primary); /* Using accent color for text */
   font-weight: bold;
-  background-color: #fff0f0; /* Light red background */
+  background-color: var(--element-background); /* Match post background, border gives emphasis */
   padding: 5px 10px;
   border-radius: 15px; /* Pill shape */
-  border: 1px solid #e74c3c;
+  border: 1px solid var(--accent-primary); /* Using accent color for border */
 }
 
 .live-user-count .live-indicator {
   display: inline-block;
   margin-right: 5px;
   animation: pulse 1.5s infinite;
+  /* Consider changing pulse color if accent is not red, or create a red CSS variable */
 }
 
 @keyframes pulse {
@@ -56,16 +57,16 @@
 
 .jam-post .genre {
   font-style: italic;
-  color: #555;
+  color: var(--text-secondary);
   margin-bottom: 8px;
   display: inline-block;
-  background-color: #eee;
+  background-color: var(--highlight-background);
   padding: 4px 8px;
   border-radius: 4px;
 }
 
 .jam-post .description {
-  color: #444;
+  color: var(--text-primary); /* Main text for description */
   line-height: 1.6;
   margin-bottom: 16px;
 }
@@ -73,15 +74,15 @@
 .jam-post .host-controls {
   margin-bottom: 16px;
   padding: 12px;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color: var(--background-primary); /* Slightly different background */
+  border: 1px solid var(--highlight-background);
   border-radius: 4px;
 }
 
 .jam-post .host-controls h3 {
   margin-top: 0;
   margin-bottom: 8px;
-  color: #333;
+  color: var(--text-primary);
   font-size: 1.1em;
 }
 
@@ -92,29 +93,30 @@
 }
 
 .jam-post .host-controls li {
-  color: #555;
+  color: var(--text-secondary);
   margin-bottom: 4px;
 }
 
 .jam-post .spotify-jam {
   margin-top: 16px;
   padding: 12px;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color: var(--background-primary); /* Slightly different background */
+  border: 1px solid var(--highlight-background);
   border-radius: 4px;
 }
 
 .jam-post .spotify-jam h3 {
   margin-top: 0;
   margin-bottom: 8px;
-  color: #333;
+  color: var(--text-primary);
   font-size: 1.1em;
 }
 
 .jam-post .spotify-jam iframe {
   border-radius: 4px;
+  /* Consider adding filter: invert(1) brightness(0.9) if Spotify embed is light and clashes */
 }
 
 .jam-post .spotify-jam p {
-  color: #777;
+  color: var(--text-secondary);
 }

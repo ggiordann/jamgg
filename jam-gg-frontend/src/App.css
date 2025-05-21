@@ -4,21 +4,71 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  padding: 20px;
-  text-align: center;
-  font-size: calc(12px + 2vmin); /* Slightly increased base font size */
-  color: white;
-  margin-bottom: 20px; /* Added margin to separate header from main content */
+  background-color: var(--element-background);
+  /* font-size: calc(12px + 2vmin); */ /* Removed as font size will be handled by h1 and nav links */
+  color: var(--text-primary);
+  /* margin-bottom: 20px; */ /* Removed as per instructions */
+  padding: 0 20px; /* Added horizontal spacing */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px; /* Fixed height for the header */
 }
 
 .App-header h1 {
-  margin: 0;
-  font-size: 1.8em; /* Adjusted h1 size within header */
+  margin: 0; /* Ensured no extra spacing */
+  font-size: 1.8em; /* Appropriate logo size */
+  color: var(--text-primary); /* Ensured text color */
+}
+
+/* Navigation Styles */
+nav.main-nav {
+  display: flex;
+  gap: 30px; /* Spacing between links */
+}
+
+nav.main-nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 10px 0; /* Vertically center within header */
+  font-weight: bold;
+  transition: color 0.2s ease-in-out;
+  border-bottom: 2px solid transparent; /* Placeholder for active state alignment */
+}
+
+nav.main-nav a:hover {
+  color: var(--text-primary);
+}
+
+nav.main-nav a.active {
+  color: var(--text-primary); /* Or var(--accent-primary) */
+  border-bottom: 2px solid var(--accent-primary);
+  /* padding-bottom: 8px; */ /* Adjust if needed, padding already applied */
+}
+
+/* Theme Toggle Button */
+.theme-toggle-button {
+  background-color: var(--accent-primary);
+  color: #FFFFFF; /* White text */
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px; /* More rounded */
+  cursor: pointer;
+  font-weight: 600; /* Slightly less than bold */
+  font-size: 0.9em;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  margin-left: 20px; /* Add some space next to the nav */
+}
+
+.theme-toggle-button:hover {
+  background-color: var(--accent-primary-hover); /* Use the new hover variable */
+  color: #FFFFFF; /* Keep text white, as is common for Spotify green buttons */
+  /* filter: brightness(1.1); */ /* Optional: for extra pop */
 }
 
 main {
-  padding: 0 20px 20px 20px; /* Added padding to the sides and bottom */
+  padding: 20px; /* Simplified padding, consistent all around */
+  /* padding: 0 20px 20px 20px; */ /* Replaced by padding: 20px; above */
   max-width: 1200px; /* Limit overall width of main content */
   margin: 0 auto; /* Center main content */
 }
@@ -54,7 +104,7 @@ main {
 hr {
   border: 0;
   height: 1px;
-  background-color: #ddd;
+  background-color: var(--highlight-background);
   margin: 20px 0;
 }
 
