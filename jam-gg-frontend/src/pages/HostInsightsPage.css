@@ -1,27 +1,27 @@
 .host-insights-page {
-  font-family: sans-serif;
+  /* font-family: sans-serif; */ /* Inherits global font */
   padding: 20px;
   max-width: 1000px;
   margin: 0 auto;
-  background-color: #f9fafb; /* Light background for the whole page */
+  background-color: var(--background-primary);
 }
 
 .insights-header {
   text-align: center;
   margin-bottom: 30px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid var(--highlight-background);
 }
 
 .insights-header h1 {
   font-size: 2.5em;
-  color: #2c3e50; /* Dark blue-grey */
+  color: var(--text-primary);
   margin-bottom: 8px;
 }
 
 .insights-header p {
   font-size: 1.1em;
-  color: #555;
+  color: var(--text-secondary);
 }
 
 .key-metrics-summary {
@@ -33,27 +33,27 @@
 }
 
 .metric-card {
-  background-color: #fff;
+  background-color: var(--element-background);
   padding: 20px 25px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Darker shadow */
   text-align: center;
   flex: 1; /* Distribute space evenly */
   min-width: 200px; /* Minimum width before wrapping */
-  border-left: 5px solid #3498db; /* Accent color */
+  border-left: 5px solid var(--accent-primary);
 }
 
 .metric-card h3 {
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 1.2em;
-  color: #3498db; /* Match accent color */
+  color: var(--accent-primary);
 }
 
 .metric-value {
   font-size: 2.2em;
   font-weight: bold;
-  color: #2c3e50;
+  color: var(--text-primary);
   margin: 0;
 }
 
@@ -65,18 +65,18 @@
 }
 
 .card { /* Common styling for cards in insights-details and chart-placeholders */
-  background-color: #fff;
+  background-color: var(--element-background);
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25); /* Darker shadow */
 }
 
 .card h2 {
   margin-top: 0;
   margin-bottom: 15px;
   font-size: 1.5em;
-  color: #333;
-  border-bottom: 1px solid #eee;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--highlight-background);
   padding-bottom: 10px;
 }
 
@@ -87,8 +87,8 @@
 }
 
 .popular-genres li {
-  background-color: #e9f5ff;
-  color: #007bff;
+  background-color: var(--highlight-background);
+  color: var(--accent-primary);
   padding: 8px 12px;
   border-radius: 15px; /* Pill shape */
   margin-bottom: 8px;
@@ -105,20 +105,20 @@
 .top-engaging-jams th,
 .top-engaging-jams td {
   padding: 10px 12px;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid var(--highlight-background);
   text-align: left;
 }
 
 .top-engaging-jams th {
-  background-color: #f7f9fa;
+  background-color: var(--element-background); /* Darker than highlight for header */
   font-weight: bold;
-  color: #555;
+  color: var(--text-secondary);
   font-size: 1em;
 }
 
 .top-engaging-jams td {
   font-size: 0.95em;
-  color: #444;
+  color: var(--text-primary);
 }
 
 .top-engaging-jams tr:last-child td {
@@ -126,7 +126,7 @@
 }
 
 .top-engaging-jams tr:hover {
-  background-color: #f9f9f9;
+  background-color: var(--highlight-background);
 }
 
 .chart-placeholders {
@@ -143,21 +143,21 @@
   justify-content: center; /* Center text vertically */
   align-items: center; /* Center text horizontally */
   text-align: center;
-  border: 2px dashed #ced4da; /* Dashed border for placeholder */
+  border: 2px dashed var(--text-secondary); /* Dashed border for placeholder */
 }
 
 .chart-placeholder h3 {
   margin-top: 0;
   margin-bottom: 10px;
-  color: #6c757d; /* Muted color for placeholder text */
+  color: var(--text-secondary); /* Muted color for placeholder text */
 }
 
 .chart-placeholder p {
-  color: #6c757d;
+  color: var(--text-secondary);
   font-size: 0.9em;
 }
 
 .card p { /* For "No data" messages */
-  color: #6c757d;
+  color: var(--text-secondary);
   font-style: italic;
 }

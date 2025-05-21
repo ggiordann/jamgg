@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 import './App.css';
 import JamPost from './components/JamPost';
 import JamCreateForm from './components/JamCreateForm';
@@ -39,17 +39,30 @@ const MainPage = () => {
 };
 
 function App() {
+  const [theme, setTheme] = useState('dark'); // 'dark' or 'light'
+
+  useEffect(() => {
+    document.body.className = theme + '-mode'; // Will add 'dark-mode' or 'light-mode'
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prevTheme => (prevTheme === 'dark' ? 'light' : 'dark'));
+  };
+
   return (
     <Router>
       <div className="App">
         <header className="App-header">
           <h1>Jam.gg</h1>
           <nav className="main-nav">
-            <Link to="/">Home</Link>
-            <Link to="/discover">Discover</Link>
-            <Link to="/profile/sampleuser">Profile</Link>
-            <Link to="/dashboard/insights">Host Insights</Link> {/* Add Host Insights link */}
+            <NavLink to="/" end>Home</NavLink>
+            <NavLink to="/discover">Discover</NavLink>
+            <NavLink to="/profile/sampleuser">Profile</NavLink>
+            <NavLink to="/dashboard/insights">Host Insights</NavLink> {/* Add Host Insights link */}
           </nav>
+          <button onClick={toggleTheme} className="theme-toggle-button">
+            Switch to {theme === 'dark' ? 'Light' : 'Dark'} Mode
+          </button>
         </header>
         <main>
           <Routes>

@@ -1,21 +1,21 @@
 .user-profile-page {
-  font-family: sans-serif;
+  /* font-family: sans-serif; */ /* Inherits global font */
   padding: 20px;
   max-width: 900px;
   margin: 0 auto;
-  background-color: #f4f4f4;
+  background-color: var(--background-primary); /* Page background */
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2); /* Adjusted shadow */
 }
 
 .profile-header {
   display: flex;
   align-items: center;
-  background-color: #fff;
+  background-color: var(--element-background); /* Header card background */
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25); /* Adjusted shadow */
 }
 
 .profile-picture-container {
@@ -27,17 +27,17 @@
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #ddd;
+  border: 3px solid var(--highlight-background); /* Border for profile picture */
 }
 
 .user-info-summary h1 {
   margin: 0 0 5px 0;
   font-size: 2em;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .spotify-profile-link {
-  color: #1DB954; /* Spotify Green */
+  color: var(--accent-primary); /* Spotify Green matches our accent */
   text-decoration: none;
   font-weight: bold;
   display: inline-block;
@@ -51,17 +51,19 @@
 .edit-profile-button {
   margin-left: auto; /* Pushes button to the far right */
   padding: 10px 15px;
-  background-color: #007bff;
-  color: white;
-  border: none;
+  background-color: var(--highlight-background); /* Subdued button */
+  color: var(--text-primary);
+  border: 1px solid var(--element-background); /* Subtle border */
   border-radius: 4px;
   cursor: pointer;
   font-size: 0.9em;
   align-self: flex-start; /* Align with top of user info if possible */
+  transition: background-color 0.3s ease;
 }
 
 .edit-profile-button:hover {
-  background-color: #0056b3;
+  background-color: var(--element-background); /* Darken on hover */
+  border-color: var(--highlight-background);
 }
 
 .profile-details {
@@ -71,18 +73,18 @@
 }
 
 .card {
-  background-color: #fff;
+  background-color: var(--element-background); /* Card background */
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* Adjusted shadow for cards */
 }
 
 .card h2 {
   margin-top: 0;
   margin-bottom: 15px;
   font-size: 1.4em;
-  color: #333;
-  border-bottom: 1px solid #eee;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--highlight-background);
   padding-bottom: 10px;
 }
 
@@ -93,22 +95,22 @@
 }
 
 .card li {
-  background-color: #e9ecef;
+  background-color: var(--highlight-background); /* List item background */
   padding: 8px 12px;
   border-radius: 4px;
   margin-bottom: 8px;
   font-size: 0.95em;
-  color: #495057;
+  color: var(--text-secondary); /* Text color for list items */
 }
 
 .card p { /* For "No jams" messages */
-  color: #6c757d;
+  color: var(--text-secondary);
   font-style: italic;
 }
 
 .favorite-genres li {
   display: inline-block; /* Make genres appear more like tags */
   margin-right: 8px;
-  background-color: #007bff;
-  color: white;
+  background-color: var(--accent-primary); /* Use accent for genre tags */
+  color: var(--text-primary); /* Text on accent tags */
 }
