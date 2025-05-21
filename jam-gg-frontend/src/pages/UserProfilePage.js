@@ -1,5 +1,6 @@
 import React from 'react';
 import './UserProfilePage.css';
+import PlusButton from '../components/PlusButton'; // Import PlusButton
 
 const UserProfilePage = () => {
   // Mock data
@@ -43,6 +44,10 @@ const UserProfilePage = () => {
           Edit Profile
         </button>
       </header>
+
+      <div className="profile-actions"> {/* Container for the PlusButton */}
+        <PlusButton to="/create-jam" />
+      </div>
 
       <section className="profile-details">
         <div className="favorite-genres card">

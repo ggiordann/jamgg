@@ -1,112 +1,130 @@
 .jam-discover-feed-page {
-  /* font-family: sans-serif; */ /* Inherits global font */
-  padding: 20px;
-  max-width: 900px;
+  font-family: var(--font-family-sans-serif);
+  padding: 30px; /* Increased padding */
+  max-width: 1200px; /* Wider max-width for feed */
   margin: 0 auto;
-  /* background-color: var(--background-primary); Implicitly inherited */
+  background-color: var(--background-secondary); /* Use secondary for page consistency */
 }
 
 .discover-header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 35px; /* Increased spacing */
 }
 
 .discover-header h1 {
-  font-size: 2.5em;
+  font-size: 2.8em; /* Larger title */
   color: var(--text-primary);
-  margin-bottom: 10px;
+  margin-bottom: 12px; /* Increased spacing */
+  font-weight: 700;
 }
 
 .ai-personalization-note {
-  font-size: 0.9em;
+  font-size: 0.95em; /* Slightly larger */
   color: var(--text-secondary);
-  background-color: var(--highlight-background);
-  padding: 8px 12px;
-  border-radius: 4px;
-  border: 1px dashed var(--accent-primary);
-  display: inline-block; /* So it doesn't take full width */
+  background-color: var(--element-background); /* Use element background */
+  padding: 10px 15px; /* Increased padding */
+  border-radius: var(--border-radius-medium, 8px); /* Use variable */
+  border: 1px solid var(--border-color); /* Use theme border color */
+  display: inline-block; 
+}
+
+.discover-actions {
+  display: flex;
+  justify-content: center; 
+  padding: 15px 0; 
+  margin-bottom: 30px; /* Increased spacing */
 }
 
 .jam-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Slightly wider cards */
+  gap: 25px; /* Increased gap */
 }
 
 .jam-card {
   background-color: var(--element-background);
-  border: 1px solid var(--highlight-background);
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adjusted shadow */
+  border: 1px solid var(--border-color); /* Use theme border color */
+  border-radius: var(--border-radius-large, 12px); /* Use variable */
+  box-shadow: var(--box-shadow-medium, 0 4px 8px rgba(0,0,0,0.25)); /* Use variable */
   display: flex;
-  flex-direction: column; /* Stack header, body, footer */
-  transition: box-shadow 0.3s ease;
+  flex-direction: column; 
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+  overflow: hidden; /* Ensure child elements like header don't break border-radius */
 }
 
 .jam-card:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adjusted shadow */
+  box-shadow: var(--box-shadow-hard, 0 6px 12px rgba(0,0,0,0.3)); /* Use variable */
+  transform: translateY(-4px); /* Lift card on hover */
 }
 
 .jam-card-header {
-  padding: 15px 20px;
-  border-bottom: 1px solid var(--highlight-background);
+  padding: 20px 25px; /* Increased padding */
+  border-bottom: 1px solid var(--border-color); /* Use theme border color */
+  background-color: var(--highlight-background); /* Subtle header background */
 }
 
 .jam-title {
-  margin: 0 0 5px 0;
-  font-size: 1.4em;
-  color: var(--accent-primary); /* Highlight title */
+  margin: 0 0 8px 0; /* Increased spacing */
+  font-size: 1.6em; /* Larger title */
+  color: var(--accent-primary); 
+  font-weight: 600;
 }
 
 .jam-genre {
   font-size: 0.9em;
-  color: var(--text-secondary);
-  background-color: var(--highlight-background);
-  padding: 3px 8px;
-  border-radius: 12px; /* Pill shape */
+  color: var(--button-text-color); /* Use button text for contrast on accent */
+  background-color: var(--accent-primary); /* Use accent color for genre tag */
+  padding: 5px 12px; /* Adjusted padding */
+  border-radius: var(--border-radius-pill, 25px); /* Pill shape */
   display: inline-block;
+  font-weight: 500;
 }
 
 .jam-card-body {
-  padding: 15px 20px;
-  flex-grow: 1; /* Allows body to expand if cards have different heights */
+  padding: 20px 25px; /* Increased padding */
+  flex-grow: 1; 
+  color: var(--text-secondary);
 }
 
 .host-info {
   font-size: 0.95em;
-  color: var(--text-secondary); /* Secondary for the "Hosted by:" part */
-  margin-bottom: 8px;
+  margin-bottom: 10px; /* Increased spacing */
 }
 
 .host-name {
-  font-weight: bold;
-  color: var(--text-primary); /* Primary for the actual name */
+  font-weight: 600; /* Bolder host name */
+  color: var(--text-primary); 
 }
 
 .listener-count {
   font-size: 0.9em;
-  color: var(--text-secondary);
 }
 
 .jam-card-footer {
-  padding: 15px 20px;
-  background-color: var(--background-primary); /* Match page background or slightly lighter */
-  border-top: 1px solid var(--highlight-background);
-  text-align: right; /* Align button to the right */
+  padding: 20px 25px; /* Increased padding */
+  background-color: var(--highlight-background); /* Match header background */
+  border-top: 1px solid var(--border-color); /* Use theme border color */
+  text-align: right; 
 }
 
 .join-jam-button {
-  background-color: var(--accent-primary); /* Green for join */
-  color: var(--text-primary); /* Text on accent */
+  background-color: var(--accent-primary); 
+  color: var(--button-text-color); 
   border: none;
-  padding: 10px 15px;
-  border-radius: 4px;
-  font-size: 0.95em;
+  padding: 10px 20px; /* Match PlusButton style */
+  border-radius: var(--border-radius-pill, 25px); /* Pill shape */
+  font-size: 1em; /* Slightly larger */
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  font-family: var(--font-family-sans-serif);
 }
 
 .join-jam-button:hover {
-  /* filter: brightness(85%); */
-  background-color: #1aa34a; /* Placeholder: Slightly darker green, ideally a variable */
+  background-color: var(--accent-primary-hover);
+  transform: scale(1.03); /* Slight scale on hover */
+}
+
+.join-jam-button:active {
+  transform: scale(0.98);
 }

@@ -1,91 +1,111 @@
 .user-profile-page {
-  /* font-family: sans-serif; */ /* Inherits global font */
-  padding: 20px;
-  max-width: 900px;
-  margin: 0 auto;
-  background-color: var(--background-primary); /* Page background */
-  border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2); /* Adjusted shadow */
+  font-family: var(--font-family-sans-serif);
+  padding: 30px; /* Increased padding */
+  max-width: 950px; /* Slightly wider */
+  margin: 40px auto; /* Increased top/bottom margin */
+  background-color: var(--background-secondary); /* Use secondary background for page */
+  border-radius: var(--border-radius-large, 12px); /* Use variable */
+  box-shadow: var(--box-shadow-hard, 0 6px 12px rgba(0,0,0,0.3)); /* Use variable */
 }
 
 .profile-header {
   display: flex;
   align-items: center;
-  background-color: var(--element-background); /* Header card background */
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.25); /* Adjusted shadow */
+  background-color: var(--element-background); 
+  padding: 25px; /* Increased padding */
+  border-radius: var(--border-radius-large, 12px); /* Use variable */
+  margin-bottom: 30px; /* Increased spacing */
+  box-shadow: var(--box-shadow-medium, 0 4px 8px rgba(0,0,0,0.25)); /* Use variable */
 }
 
 .profile-picture-container {
-  margin-right: 20px;
+  margin-right: 25px; /* Increased spacing */
 }
 
 .profile-picture {
-  width: 120px;
-  height: 120px;
+  width: 130px; /* Slightly larger */
+  height: 130px; /* Slightly larger */
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid var(--highlight-background); /* Border for profile picture */
+  border: 4px solid var(--accent-primary); /* Use accent color for border */
+  box-shadow: var(--box-shadow-soft);
 }
 
 .user-info-summary h1 {
-  margin: 0 0 5px 0;
-  font-size: 2em;
+  margin: 0 0 8px 0; /* Increased bottom margin */
+  font-size: 2.2em; /* Slightly larger */
   color: var(--text-primary);
+  font-weight: 700;
 }
 
 .spotify-profile-link {
-  color: var(--accent-primary); /* Spotify Green matches our accent */
+  color: var(--accent-primary); 
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600; /* Adjusted weight */
   display: inline-block;
-  margin-bottom: 10px;
+  margin-bottom: 12px; /* Increased spacing */
+  transition: color 0.2s ease;
 }
 
 .spotify-profile-link:hover {
+  color: var(--accent-primary-hover);
   text-decoration: underline;
 }
 
 .edit-profile-button {
-  margin-left: auto; /* Pushes button to the far right */
-  padding: 10px 15px;
-  background-color: var(--highlight-background); /* Subdued button */
+  margin-left: auto; 
+  padding: 10px 20px; /* Match PlusButton style */
+  background-color: var(--highlight-background); 
   color: var(--text-primary);
-  border: 1px solid var(--element-background); /* Subtle border */
-  border-radius: 4px;
+  border: 1px solid var(--border-color); /* Use theme border color */
+  border-radius: var(--border-radius-pill, 25px); /* Pill shape */
   cursor: pointer;
-  font-size: 0.9em;
-  align-self: flex-start; /* Align with top of user info if possible */
-  transition: background-color 0.3s ease;
+  font-size: 0.95em; /* Slightly larger */
+  font-weight: 600;
+  align-self: flex-start; 
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+  font-family: var(--font-family-sans-serif);
 }
 
 .edit-profile-button:hover {
-  background-color: var(--element-background); /* Darken on hover */
-  border-color: var(--highlight-background);
+  background-color: var(--element-background); 
+  border-color: var(--accent-primary); /* Highlight border on hover */
+  transform: scale(1.03);
+}
+
+.edit-profile-button:active {
+  transform: scale(0.98);
+}
+
+.profile-actions {
+  display: flex;
+  justify-content: center; 
+  padding: 20px 0; /* Increased padding */
+  margin-bottom: 30px; /* Increased spacing */
 }
 
 .profile-details {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Slightly larger minmax */
+  gap: 25px; /* Increased gap */
 }
 
 .card {
-  background-color: var(--element-background); /* Card background */
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* Adjusted shadow for cards */
+  background-color: var(--element-background); 
+  padding: 25px; /* Increased padding */
+  border-radius: var(--border-radius-large, 12px); /* Use variable */
+  box-shadow: var(--box-shadow-medium, 0 4px 8px rgba(0,0,0,0.25)); /* Use variable */
+  border: 1px solid var(--border-color); /* Subtle border for cards */
 }
 
 .card h2 {
   margin-top: 0;
-  margin-bottom: 15px;
-  font-size: 1.4em;
+  margin-bottom: 18px; /* Increased spacing */
+  font-size: 1.5em; /* Slightly larger */
   color: var(--text-primary);
-  border-bottom: 1px solid var(--highlight-background);
-  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-color); /* Use theme border color */
+  padding-bottom: 12px; /* Increased padding */
+  font-weight: 600;
 }
 
 .card ul {
@@ -95,22 +115,40 @@
 }
 
 .card li {
-  background-color: var(--highlight-background); /* List item background */
-  padding: 8px 12px;
-  border-radius: 4px;
-  margin-bottom: 8px;
+  background-color: var(--background-secondary); /* Slightly different background for items */
+  padding: 10px 15px; /* Increased padding */
+  border-radius: var(--border-radius-medium, 8px); /* More rounded */
+  margin-bottom: 10px; /* Increased spacing */
   font-size: 0.95em;
-  color: var(--text-secondary); /* Text color for list items */
+  color: var(--text-secondary); 
+  border: 1px solid var(--border-color);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
-.card p { /* For "No jams" messages */
+.card li:hover {
+  background-color: var(--highlight-background);
+  border-color: var(--accent-primary);
+}
+
+.card p { 
   color: var(--text-secondary);
   font-style: italic;
+  padding-top: 10px; /* Add some space if list is empty */
 }
 
 .favorite-genres li {
-  display: inline-block; /* Make genres appear more like tags */
-  margin-right: 8px;
-  background-color: var(--accent-primary); /* Use accent for genre tags */
-  color: var(--text-primary); /* Text on accent tags */
+  display: inline-block; 
+  margin-right: 10px; /* Increased spacing */
+  margin-bottom: 10px; /* Add bottom margin for wrapped items */
+  background-color: var(--accent-primary); 
+  color: var(--button-text-color); /* Use button text color for contrast */
+  border-radius: var(--border-radius-pill, 25px); /* Pill shape for tags */
+  padding: 8px 15px; /* Adjusted padding for pill shape */
+  font-weight: 500;
+  border: none; /* Remove border from favorite genre list items */
+}
+
+.favorite-genres li:hover {
+  background-color: var(--accent-primary-hover);
+  /* No border change needed here as it's an accent element */
 }

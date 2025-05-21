@@ -1,0 +1,155 @@
+/* JamDetailModal.css */
+.jam-detail-modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+  z-index: 1000; /* Ensure it's on top */
+  justify-content: center;
+  align-items: center;
+}
+
+.jam-detail-modal.open {
+  display: flex; /* Show when .open class is added */
+}
+
+.modal-content {
+  background-color: var(--element-background);
+  padding: 30px; /* Increased padding */
+  border-radius: var(--border-radius-large, 12px); /* Use variable */
+  box-shadow: var(--box-shadow-hard, 0 6px 12px rgba(0,0,0,0.3)); /* Use variable */
+  width: 90%;
+  max-width: 650px; /* Slightly wider modal */
+  max-height: 90vh; 
+  overflow-y: auto; 
+  position: relative; 
+  color: var(--text-primary); /* Use primary text color */
+  border: 1px solid var(--border-color); /* Subtle border for modal */
+  font-family: var(--font-family-sans-serif);
+}
+
+.close-button {
+  position: absolute;
+  top: 18px; /* Adjusted position */
+  right: 18px; /* Adjusted position */
+  background: var(--highlight-background); /* Consistent with other secondary buttons */
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  width: 35px; /* Slightly larger */
+  height: 35px; /* Slightly larger */
+  font-size: 22px; /* Larger icon */
+  line-height: 33px; /* Adjust line height for new size */
+  text-align: center;
+  cursor: pointer;
+  box-shadow: var(--box-shadow-soft);
+  transition: background-color 0.2s ease, transform 0.1s ease, border-color 0.2s ease;
+}
+
+.close-button:hover {
+  background-color: var(--element-background);
+  border-color: var(--accent-primary);
+  transform: scale(1.05);
+}
+
+.close-button:active {
+  transform: scale(0.95);
+}
+
+/* Re-using some styles from JamPost.css for consistency, if needed */
+.jam-detail-modal .jam-post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; /* Increased spacing */
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 15px; /* Increased spacing */
+}
+
+.jam-detail-modal .jam-post-header h2 {
+  margin: 0;
+  font-size: 2em; /* Larger title */
+  color: var(--accent-primary); /* Use accent for modal title */
+  font-weight: 700;
+}
+
+.jam-detail-modal .live-user-count {
+  font-size: 0.95em; /* Slightly larger */
+  display: flex;
+  align-items: center;
+  color: var(--text-secondary); /* Use secondary text color */
+  background-color: var(--highlight-background);
+  padding: 5px 10px;
+  border-radius: var(--border-radius-medium);
+}
+
+.jam-detail-modal .live-indicator {
+  width: 10px;
+  height: 10px;
+  background-color: var(--live-indicator-color); 
+  border-radius: 50%;
+  margin-right: 8px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.jam-detail-modal .genre,
+.jam-detail-modal .description {
+  margin-bottom: 18px; /* Increased spacing */
+  line-height: 1.7; /* Improved readability */
+  color: var(--text-secondary);
+}
+
+.jam-detail-modal .genre {
+  font-weight: 600;
+  color: var(--text-primary); /* Make genre more prominent */
+}
+
+.jam-detail-modal .host-controls h3,
+.jam-detail-modal .spotify-jam h3 {
+  margin-top: 25px; /* Increased spacing */
+  margin-bottom: 15px; /* Increased spacing */
+  color: var(--text-primary); /* Primary text for subtitles */
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 8px; /* Increased spacing */
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.jam-detail-modal .host-controls ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.jam-detail-modal .host-controls ul li {
+  margin-bottom: 10px; /* Increased spacing */
+  background-color: var(--background-secondary); /* Match card li style */
+  padding: 10px 15px; /* Match card li style */
+  border-radius: var(--border-radius-medium, 8px); /* Match card li style */
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+.jam-detail-modal .spotify-jam iframe {
+  border-radius: var(--border-radius-large, 12px); /* More rounded iframe */
+  margin-top: 15px; /* Increased spacing */
+  border: 1px solid var(--border-color); /* Add a subtle border */
+}
+
+/* Animation for live indicator */
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+}
