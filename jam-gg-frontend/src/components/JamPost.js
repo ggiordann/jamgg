@@ -3,14 +3,12 @@ import './JamPost.css';
 import VibeCheckReactions from './VibeCheckReactions';
 
 const JamPost = ({ jam }) => {
-  if (!jam) {
-    return <div className="jam-post">No jam data provided.</div>;
-  }
-
-  const { title, genre, description, hostControls, spotifyJamUrl, liveUserCount = 0 } = jam;
-  const [currentLiveUsers, setCurrentLiveUsers] = useState(liveUserCount);
+  // Move useState and useEffect hooks to the top, before any conditional returns
+  const [currentLiveUsers, setCurrentLiveUsers] = useState(jam ? jam.liveUserCount : 0);
 
   useEffect(() => {
+    if (!jam) return; // Add a guard clause inside useEffect if jam is not available initially
+
     // Mock real-time update for live user count
     const interval = setInterval(() => {
       setCurrentLiveUsers(prevUsers => {
@@ -22,7 +20,13 @@ const JamPost = ({ jam }) => {
     }, 3000); // Update every 3 seconds
 
     return () => clearInterval(interval); // Cleanup on component unmount
-  }, []); // Empty dependency array means this effect runs once on mount and cleans up on unmount
+  }, [jam]); // Add jam to the dependency array
+
+  if (!jam) {
+    return <div className="jam-post">No jam data provided.</div>;
+  }
+
+  const { title, genre, description, hostControls, spotifyJamUrl } = jam;
 
   return (
     <div className="jam-post">
