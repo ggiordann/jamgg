@@ -1,28 +1,50 @@
 :root {
-  --background-primary: #121212;
+  --font-family-sans-serif: "Proxima Nova", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  
+  /* Dark Mode (Default) */
+  --background-primary: #121212; /* Spotify's main dark background */
+  --background-secondary: #181818; /* Slightly lighter for elevated surfaces or page sections */
+  --element-background: #282828; /* For cards, modals, distinct UI elements */
+  --highlight-background: #383838; /* For interactive elements on hover/focus or subtle borders */
   --text-primary: #FFFFFF;
-  --text-secondary: #B3B3B3;
-  --accent-primary: #1DB954;
-  --accent-primary-hover: #1ED760; /* Lighter green for dark mode hover */
-  --element-background: #282828;
-  --highlight-background: #383838;
+  --text-secondary: #B3B3B3; /* For less prominent text */
+  --text-placeholder: #757575; /* Placeholder text */
+  --accent-primary: #1DB954; /* Spotify green */
+  --accent-primary-rgb: 29, 185, 84; /* For rgba box-shadows */
+  --accent-primary-hover: #1ED760; /* Lighter green for hover */
+  --border-color: #333333; /* Subtle borders */
+  --button-text-color: #FFFFFF; /* Text on accent buttons */
+  --live-indicator-color: #1DB954;
+
+  /* Add other common variables */
+  --border-radius-small: 4px;
+  --border-radius-medium: 8px;
+  --border-radius-large: 12px;
+  --border-radius-pill: 25px; /* For pill-shaped buttons */
+  --box-shadow-soft: 0 2px 4px rgba(0,0,0,0.2);
+  --box-shadow-medium: 0 4px 8px rgba(0,0,0,0.25);
+  --box-shadow-hard: 0 6px 12px rgba(0,0,0,0.3);
 }
 
 body.light-mode {
   --background-primary: #FFFFFF;
-  --text-primary: #121212;
-  --text-secondary: #535353;
-  --accent-primary: #1DB954;
-  --accent-primary-hover: #1AAE4A; /* Darker green for light mode hover */
-  --element-background: #F0F0F0;
+  --background-secondary: #F9F9F9;
+  --element-background: #F0F0F0; /* Or use #FFFFFF for cards and let shadow distinguish */
   --highlight-background: #E0E0E0;
+  --text-primary: #181818; /* Darker text for light mode */
+  --text-secondary: #535353;
+  --text-placeholder: #808080;
+  --accent-primary: #1DB954;
+  --accent-primary-rgb: 29, 185, 84;
+  --accent-primary-hover: #1AAE4A; /* Darker green for light mode hover */
+  --border-color: #DCDCDC;
+  --button-text-color: #FFFFFF;
+  --live-indicator-color: #1DB954;
 }
 
 body {
   margin: 0;
-  font-family: "Proxima Nova", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font-family-sans-serif);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background-primary);

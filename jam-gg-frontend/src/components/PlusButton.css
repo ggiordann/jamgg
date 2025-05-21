@@ -1,0 +1,43 @@
+/* PlusButton.css */
+.plus-button {
+  display: inline-flex; /* Align items in a row and allow inline behavior */
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px; /* Comfortable padding: vertical horizontal */
+  border-radius: 25px; /* Pill-shaped or very rounded */
+  background-color: var(--accent-primary);
+  color: #FFFFFF; /* White text */
+  font-family: var(--font-family-sans-serif, "Proxima Nova", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif);
+  font-size: 1em; /* Base font size, can be adjusted */
+  font-weight: 600; /* Semi-bold for prominence */
+  text-decoration: none; /* Remove underline from Link */
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+  border: none; /* No border */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15); /* Subtle shadow for depth */
+}
+
+.plus-button:hover {
+  background-color: var(--accent-primary-hover, #1aa34a); /* Fallback if variable not defined */
+  transform: translateY(-1px); /* Slight lift on hover */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Enhanced shadow on hover */
+}
+
+.plus-button:active {
+  transform: translateY(0px); /* Reset lift on active/click */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.plus-icon {
+  margin-right: 10px; /* Space between icon and text */
+  /* SVG inherits color from .plus-button's color property (currentColor) */
+  /* Size is set inline in the SVG for now, but could be controlled here too */
+  display: inline-block; /* Helps with alignment */
+  vertical-align: middle; /* Align SVG nicely with text */
+}
+
+.plus-button-text {
+  display: inline-block;
+  vertical-align: middle; /* Align text nicely with icon */
+  line-height: 1; /* Ensure text aligns well if icon makes line-height taller */
+}
